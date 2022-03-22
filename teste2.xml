@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Sun Feb 27 21:37:13 2022 as: nmap -D RND:20 -sV -sT -O -Pn -p- -script=vuln -oX arquivos/nmap/2022-02-2718:37:13.534938-03:00admin.xml 172.16.1.145/32 -->
+<nmaprun scanner="nmap" args="nmap -D RND:20 -sV -sT -O -Pn -p- -script=vuln -oX arquivos/nmap/2022-02-2718:37:13.534938-03:00admin.xml 172.16.1.145/32" start="1645997833" startstr="Sun Feb 27 21:37:13 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1645997844" endtime="1645998238"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="172.16.1.145" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65533">
+<extrareasons reason="no-response" count="65533" proto="tcp" ports="1-138,140-444,446-65535"/>
+</extraports>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" product="Microsoft Windows 7 - 10 microsoft-ds" extrainfo="workgroup: ORIONSCORP" hostname="USUARIO-PC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="139"/>
+<osmatch name="Microsoft Windows 8.1 Update 1" accuracy="92" line="78051">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8" accuracy="92"><cpe>cpe:/o:microsoft:windows_8</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Phone 7.5 or 8.0" accuracy="92" line="79339">
+<osclass type="phone" vendor="Microsoft" osfamily="Windows" osgen="Phone" accuracy="92"><cpe>cpe:/o:microsoft:windows</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7 or Windows Server 2008 R2" accuracy="91" line="74387">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="91"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008 R2" accuracy="91" line="74606">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008 R2 or Windows 8.1" accuracy="91" line="74932">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8.1" accuracy="91"><cpe>cpe:/o:microsoft:windows_8.1</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008 R2 SP1 or Windows 8" accuracy="91" line="75116">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2008:r2:sp1</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8" accuracy="91"><cpe>cpe:/o:microsoft:windows_8</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7" accuracy="91" line="76462">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="91"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7 Professional or Windows 8" accuracy="91" line="77013">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="91"><cpe>cpe:/o:microsoft:windows_7::-:professional</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8" accuracy="91"><cpe>cpe:/o:microsoft:windows_8</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7 SP1 or Windows Server 2008 R2" accuracy="91" line="77679">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="91"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1" accuracy="91" line="77747">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="91"><cpe>cpe:/o:microsoft:windows_7::sp1</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2008::sp2</cpe><cpe>cpe:/o:microsoft:windows_server_2008:r2:sp1</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="14735" lastboot="Sun Feb 27 17:38:23 2022"/>
+<tcpsequence index="260" difficulty="Good luck!" values="1085ECBA,93F83C6D,B0D23849,7E6D9E80,365FCC05,731411BF"/>
+<ipidsequence class="Incremental" values="1D7E,1D7F,1D80,1D81,1D83,1D84"/>
+<tcptssequence class="100HZ" values="167482,16748C,167496,1674A0,1674AA,1674B4"/>
+<hostscript><script id="smb-vuln-ms10-054" output="false">false</script><script id="samba-vuln-cve-2012-1182" output="NT_STATUS_ACCESS_DENIED">false</script><script id="smb-vuln-ms10-061" output="NT_STATUS_ACCESS_DENIED">false</script><script id="smb-double-pulsar-backdoor" output="&#xa;  VULNERABLE:&#xa;  Double Pulsar SMB Backdoor&#xa;    State: VULNERABLE&#xa;    Risk factor: HIGH  CVSSv2: 10.0 (HIGH) (AV:N/AC:L/Au:N/C:C/I:C/A:C)&#xa;      The Double Pulsar SMB backdoor was detected running on the remote machine.&#xa;      &#xa;    Disclosure date: 2017-04-14&#xa;    References:&#xa;      https://isc.sans.edu/forums/diary/Detecting+SMB+Covert+Channel+Double+Pulsar/22312/&#xa;      https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation&#xa;      https://github.com/countercept/doublepulsar-detection-script&#xa;"><table key="NMAP-2">
+<elem key="title">Double Pulsar SMB Backdoor</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="scores">
+<elem key="CVSSv2">10.0 (HIGH) (AV:N/AC:L/Au:N/C:C/I:C/A:C)</elem>
+</table>
+<table key="description">
+<elem>The Double Pulsar SMB backdoor was detected running on the remote machine.&#xa;</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="month">04</elem>
+<elem key="day">14</elem>
+<elem key="year">2017</elem>
+</table>
+</table>
+<elem key="disclosure">2017-04-14</elem>
+<table key="exploit_results">
+</table>
+<table key="refs">
+<elem>https://isc.sans.edu/forums/diary/Detecting+SMB+Covert+Channel+Double+Pulsar/22312/</elem>
+<elem>https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation</elem>
+<elem>https://github.com/countercept/doublepulsar-detection-script</elem>
+</table>
+</table>
+</script><script id="smb-vuln-ms17-010" output="&#xa;  VULNERABLE:&#xa;  Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)&#xa;    State: VULNERABLE&#xa;    IDs:  CVE:CVE-2017-0143&#xa;    Risk factor: HIGH&#xa;      A critical remote code execution vulnerability exists in Microsoft SMBv1&#xa;       servers (ms17-010).&#xa;          &#xa;    Disclosure date: 2017-03-14&#xa;    References:&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143&#xa;      https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/&#xa;      https://technet.microsoft.com/en-us/library/security/ms17-010.aspx&#xa;"><table key="CVE-2017-0143">
+<elem key="title">Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2017-0143</elem>
+</table>
+<table key="description">
+<elem>A critical remote code execution vulnerability exists in Microsoft SMBv1&#xa; servers (ms17-010).&#xa;    </elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="month">03</elem>
+<elem key="day">14</elem>
+<elem key="year">2017</elem>
+</table>
+</table>
+<elem key="disclosure">2017-03-14</elem>
+<table key="refs">
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143</elem>
+<elem>https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/</elem>
+<elem>https://technet.microsoft.com/en-us/library/security/ms17-010.aspx</elem>
+</table>
+</table>
+</script></hostscript><times srtt="173927" rttvar="840" to="177287"/>
+</host>
+<runstats><finished time="1645998238" timestr="Sun Feb 27 21:43:58 2022" summary="Nmap done at Sun Feb 27 21:43:58 2022; 1 IP address (1 host up) scanned in 405.33 seconds" elapsed="405.33" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
