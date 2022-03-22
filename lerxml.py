@@ -1,9 +1,17 @@
 import xml.etree.ElementTree as ET
-tree = ET.parse("teste2.xml")
+tree = ET.parse("teste.xml")
 root = tree.getroot()
 
 
 ips = []
+sistemas_operacionais_vetor=[]
+class Sistema_Operacional_representar:
+
+    def __init__(self, ip, nome,probabilidade,posicao):
+        self.ip = ip
+        self.nome = nome
+        self.posicao = posicao
+        self.probabilidade = probabilidade
 
 class CVE_IPS_2:
     def __init__(self, ip, cve,descricao):
@@ -53,18 +61,16 @@ for child in root.findall("host"):
                                 validar = 1
 
                             for element in osss:
-
                                 if element.attrib['key'] == 'description':
-                                    print(element.attrib['key'])
 
                                     for alou in element.findall("elem"):
-                                        print(alou.text)
                                         descricao = alou.text
+                                
                             if validar == 1:
                                 cve_ips_vetor.append(CVE_IPS_2(cve_texto, osss.attrib['key'],descricao))
 
                         except:
-                            print("não é vulneravel")
+                            pass
 
                 porta_objeto = Porta_representar(porta, servico, produto, versao)
                 portas.append(porta_objeto)
@@ -84,6 +90,7 @@ for child in root.findall("host"):
                     print(sistema_operacional_principal)
                     print(sistema_operacional_principal_probabilidade)
 
+                sistemas_operacionais_vetor.append(Sistema_Operacional_representar(str(title.attrib['addr']),sistema_operacional,sistema_operacional_principal_probabilidade,contador))
         """
         for os in child.findall("hostscript"):
             for oss in os.findall("script"):
@@ -116,7 +123,18 @@ for ip in ips:
 
 print("---------------------")
 print("CVES")
+print("---------------------")
+
 for cve in cve_ips_vetor:
-        print(cve.cve)
         print(cve.ip)
-        
+        print(cve.cve)
+        print(cve.descricao)
+        print("---------------------")
+
+print("Sistemas operacionais")
+for sistemas in sistemas_operacionais_vetor:
+    print(sistemas.ip)
+    print(sistemas.nome)
+    print(sistemas.probabilidade)
+    print(sistemas.posicao)
+print('\n\n\n\n\n\n')
